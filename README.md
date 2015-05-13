@@ -2,6 +2,7 @@
 Syntax for P3 Assembly in Sublime Text 3,2
 
 ###V0.01
+https://github.com/Jguer/P3-Assembly-Sublime-Text-Syntax/blob/master/dist/P3%20Assembly.sublime-package?raw=true
 
 ## Install
 On Sublime text: 
