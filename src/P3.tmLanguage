@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>as</string>
+	</array>
+	<key>name</key>
+	<string>Assembly P3</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>Comments like ;</string>
+			<key>match</key>
+			<string>;.*</string>
+			<key>name</key>
+			<string>comment.line</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Registers like R#</string>
+			<key>match</key>
+			<string>R[0-7]</string>
+			<key>name</key>
+			<string>storage.type.register</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Memory like M[#]</string>
+			<key>begin</key>
+			<string>"M\["</string>
+			<key>end</key>
+			<string>"\]"</string>
+			<key>name</key>
+			<string>storage.type.register</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Instructions</string>
+			<key>match</key>
+			<string>\b(ORIG|EQU|WORD|STR|TAB|NEG|INC|DEC|ADD|ADDC|SUB|SUBB|CMP|MUL|DIV|COM|AND|OR|XOR|TEST|SHR|SHL|SHRA|SHLA|ROR|ROL|RORC|ROLC|BR|JMP|CALL|CALL|RET|RETN|RTI|INT|MOV|MVBH|MVBL|XCH|PUSH|POP|NOP|ENI|DSI|STC|CLC|CMC|BR\.C|BR\.NC|BR\.N|BR\.NN|BR\.O|BR\.NO|BR\.Z|BR\.NZ|BR\.I|BR\.NI|BR\.P|BR\.NP|CALL\.C|CALL\.NC|CALL\.N|CALL\.NN|CALL\.O|CALL\.NO|CALL\.Z|CALL\.NZ|CALL\.I|CALL\.NI|CALL\.P|CALL\.NP|JMP\.C|JMP\.NC|JMP\.N|JMP\.NN|JMP\.O|JMP\.NO|JMP\.Z|JMP\.NZ|JMP\.I|JMP\.NI|JMP\.P|JMP\.NP)\b</string>
+			<key>name</key>
+			<string>entity.name.function.instruction</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Decimals like</string>
+			<key>match</key>
+			<string>#-?\d+</string>
+			<key>name</key>
+			<string>constant.numeric.dec</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Hexadecimals like x# or 0x####</string>
+			<key>match</key>
+			<string>0?x[0-9a-fA-F]{1,4}+</string>
+			<key>name</key>
+			<string>constant.numeric.hex</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Hexadecimals like ####h</string>
+			<key>match</key>
+			<string>[0-9a-fA-F]{1,4}+h</string>
+			<key>name</key>
+			<string>constant.numeric.hex</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Binary numbers like b0001</string>
+			<key>match</key>
+			<string>[bB][01]+</string>
+			<key>name</key>
+			<string>constant.numeric.bin</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Directives like .DATA</string>
+			<key>match</key>
+			<string>\.(DATA|CODE|ADDR|FALIGN|FILL|BLKW|CONST|UCONST|STRINGZ)\b</string>
+			<key>name</key>
+			<string>keyword.directive</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Strings like "Hello World!"</string>
+			<key>match</key>
+			<string>"[^"\n]*"</string>
+			<key>name</key>
+			<string>string.quoted.double</string>
+		</dict>
+		<dict>
+			<key>comment</key>
+			<string>Strings like 'Hello World!'</string>
+			<key>match</key>
+			<string>"[^'\n]*"</string>
+			<key>name</key>
+			<string>string.quoted.single</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>source.as</string>
+	<key>uuid</key>
+	<string>fcf326bb-b28a-42f9-a112-b9265b2d0352</string>
+</dict>
+</plist>

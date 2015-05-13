@@ -1,2 +1,16 @@
 # P3-Assembly-Sublime-Text-Syntax
-Syntax for P3 Assembly in Sublime Text
+Syntax for P3 Assembly in Sublime Text 3,2
+
+###V0.01
+
+## Install
+On Sublime text: 
+- Preferences -> Browse Packages
+- Go up one folder
+- Go into Installed Packages
+- Paste *.sublime-package there
+- Restart Sublime Text
+
+## Credits
+
+Based on the **LC4 Assembly Syntax** - syntax highlighting package for the [University of Pennsylvania's LC4 Assembly]

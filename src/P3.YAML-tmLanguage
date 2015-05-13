@@ -1,0 +1,43 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: Assembly P3
+scopeName: source.as
+fileTypes: [as]
+uuid: fcf326bb-b28a-42f9-a112-b9265b2d0352
+
+patterns:
+- comment: Comments like ;
+  name: comment.line
+  match: ;.*
+- comment: Registers like R#
+  name: storage.type.register
+  match: R[0-7]
+ - comment: Memory like M[#]
+  name: storage.type.register
+  begin": "M\["
+  end": "\]"
+- comment: Instructions
+  name: entity.name.function.instruction
+  match: \b(ORIG|EQU|WORD|STR|TAB|NEG|INC|DEC|ADD|ADDC|SUB|SUBB|CMP|MUL|DIV|COM|AND|OR|XOR|TEST|SHR|SHL|SHRA|SHLA|ROR|ROL|RORC|ROLC|BR|JMP|CALL|CALL|RET|RETN|RTI|INT|MOV|MVBH|MVBL|XCH|PUSH|POP|NOP|ENI|DSI|STC|CLC|CMC|BR\.C|BR\.NC|BR\.N|BR\.NN|BR\.O|BR\.NO|BR\.Z|BR\.NZ|BR\.I|BR\.NI|BR\.P|BR\.NP|CALL\.C|CALL\.NC|CALL\.N|CALL\.NN|CALL\.O|CALL\.NO|CALL\.Z|CALL\.NZ|CALL\.I|CALL\.NI|CALL\.P|CALL\.NP|JMP\.C|JMP\.NC|JMP\.N|JMP\.NN|JMP\.O|JMP\.NO|JMP\.Z|JMP\.NZ|JMP\.I|JMP\.NI|JMP\.P|JMP\.NP)\b
+- comment: Decimals like #1
+  name: constant.numeric.dec
+  match: '#-?\d+'
+- comment: Hexadecimals like x# or 0x####
+  name: constant.numeric.hex
+  match: 0?x[0-9a-fA-F]{1,4}+
+- comment: Hexadecimals like ####h
+  name: constant.numeric.hex
+  match: [0-9a-fA-F]{1,4}+h
+- comment: Binary numbers like b0001
+  name: constant.numeric.bin
+  match: '[bB][01]+'
+- comment: Directives like .DATA
+  name: keyword.directive
+  match: \.(DATA|CODE|ADDR|FALIGN|FILL|BLKW|CONST|UCONST|STRINGZ)\b
+- comment: Strings like "Hello World!"
+  name: string.quoted.double
+  match: '"[^"\n]*"'
+ - comment: Single Quotes like 'Hello World!'
+  name: string.quoted.double
+  match: "[^'\n]*"
+...
