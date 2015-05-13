@@ -11,6 +11,9 @@ On Sublime text:
 - Paste *.sublime-package there
 - Restart Sublime Text
 
+
+![p3](https://raw.githubusercontent.com/Jguer/P3-Assembly-Sublime-Text-Syntax/master/Sample.png "Screenshot syntax highlight")
+
 ## Credits
 
 Based on the **LC4 Assembly Syntax** - syntax highlighting package for the [University of Pennsylvania's LC4 Assembly]
